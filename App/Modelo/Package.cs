@@ -70,8 +70,8 @@ namespace App.Modelo
         {
             return "\n_______________________________________" +
                                "\nCode: " + this.code +
-                               "\nSender: " + this.sender +
-                               "\nRecipients: " + this.recipients +
+                               "\nSender: " + this.sender.ToString() +
+                               "\nRecipients: " + this.recipients.ToString() +
                                "\nCity: " + this.weight +
                                "\nState/Province: " + this.cost +
                                "\n_______________________________________";

@@ -33,7 +33,7 @@ namespace App.Modelo
         public Bills()
         {
             this.id = ++val;
-            this.date = new DateTime(short);
+            this.date = new DateTime();
             this.items  = null;
         }
         public Bills(DateTime date, Dictionary<Package, double> packages)
