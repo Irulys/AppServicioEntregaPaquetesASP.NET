@@ -14,16 +14,40 @@ namespace App.Modelo
         private string address;
         private string city;
         private string state;
-        private long pos;
+        private long box;
         #endregion
 
         #region "Propiedades"
-        public long Id { set; get; }
-        public string Name { set; get; }
-        public string Address { set; get; }
-        public string City { set; get; }
-        public string State { set; get; }
-        public long Pos { set; get; }
+        public long Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+        public string Address
+        {
+            get { return address; }
+            set { address = value; }
+        }
+        public string City
+        {
+            get { return city; }
+            set { city = value; }
+        }
+        public string State
+        {
+            get { return state; }
+            set { state = value; }
+        }
+        public long Box
+        {
+            get { return box; }
+            set { box = value; }
+        }
         #endregion
 
         #region "Constructores"
@@ -34,17 +58,17 @@ namespace App.Modelo
             this.address = "Mi dirección";
             this.city = "Mi Ciudad";
             this.state = "Bolivar";
-            this.pos = 13001;
+            this.box = 13001;
         
         }
-        public Person(long id, string name, string address, string city, string state, long pos)
+        public Person(long id, string name, string address, string city, string state, long box)
         {
             this.id = id;
             this.name = name;
             this.address = address;
             this.city = city;
             this.state = state;
-            this.pos = pos;
+            this.box = box;
 
         }
         #endregion
@@ -53,12 +77,12 @@ namespace App.Modelo
         public override string ToString()
         {
              return "\n_______________________________________" +
-                                "\nIdentificacion: " + this.id +
+                                "\nIdentification: " + this.id +
                                 "\nNames: " + this.name +
                                 "\nAddress: " + this.address +
                                 "\nCity: " + this.city +
-                                "\nState: " + this.state +
-                                "\nPOS: " + this.pos +
+                                "\nState/Province: " + this.state +
+                                "\nPostal Code: " + this.box +
                                 "\n_______________________________________";
         }
         public override int GetHashCode()
@@ -75,7 +99,7 @@ namespace App.Modelo
                 (this.address == o.address) &&
                 (this.city == o.city) &&
                 (this.state == o.state) &&
-                (this.pos == o.pos))
+                (this.box == o.box))
 
                 result = true;
 
